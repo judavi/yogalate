@@ -1,0 +1,7 @@
+{
+  "name": "yogalate",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
