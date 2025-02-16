@@ -41,6 +41,7 @@
           expand="block" 
           fill="clear" 
           class="support-button"
+          @click="openSupportLink"
         >
           Support Creator
         </ion-button>
@@ -52,6 +53,7 @@
 <script setup lang="ts">
 import { IonPage, IonContent, IonButton } from '@ionic/vue';
 import { useRouter } from 'vue-router';
+import { Browser } from '@capacitor/browser';
 
 const router = useRouter();
 
@@ -70,6 +72,10 @@ const goToPoses = async () => {
   } catch (error) {
     console.error('Navigation error:', error);
   }
+};
+
+const openSupportLink = async () => {
+  await Browser.open({ url: 'https://buymeacoffee.com/judavi' });
 };
 </script>
 

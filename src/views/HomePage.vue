@@ -2,7 +2,12 @@
   <ion-page>
     <ion-header class="ion-no-border">
       <ion-toolbar>
-        <ion-title>Yoga Pose</ion-title>
+        <ion-buttons slot="start">
+          <ion-button class="back-button" @click="goBack">
+            <ion-icon :icon="chevronBack" />
+            <span>Home</span>
+          </ion-button>
+        </ion-buttons>
       </ion-toolbar>
     </ion-header>
 
@@ -36,26 +41,6 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-
-      <!-- Bottom Navigation -->
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="home">
-          <ion-icon :icon="home" />
-          <ion-label>Home</ion-label>
-        </ion-tab-button>
-        <ion-tab-button tab="poses">
-          <ion-icon :icon="body" />
-          <ion-label>Poses</ion-label>
-        </ion-tab-button>
-        <ion-tab-button tab="progress">
-          <ion-icon :icon="statsChart" />
-          <ion-label>Progress</ion-label>
-        </ion-tab-button>
-        <ion-tab-button tab="settings">
-          <ion-icon :icon="settings" />
-          <ion-label>Settings</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
     </ion-content>
   </ion-page>
 </template>
@@ -65,20 +50,22 @@ import {
   IonPage, 
   IonHeader, 
   IonToolbar, 
-  IonTitle, 
   IonContent,
   IonGrid,
   IonRow,
   IonCol,
-  IonTabBar,
-  IonTabButton,
-  IonIcon,
-  IonLabel
+  IonButton,
+  IonButtons,
+  IonIcon
 } from '@ionic/vue';
-import { home, body, statsChart, settings } from 'ionicons/icons';
+import { chevronBack } from 'ionicons/icons';
 import PoseCard from '@/components/PoseCard.vue';
 import { ref } from 'vue';
 import yogaData from '../data/yogaData.json';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const goBack = () => router.push('/welcome');
 
 // Use direct path to public folder
 const heroImage = '/hero.png';
@@ -148,16 +135,22 @@ ion-content {
   --background: #ffffff;
 }
 
-ion-tab-bar {
-  --background: #ffffff;
-  border-radius: 20px 20px 0 0;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
-  padding: 10px 0;
-  margin: 0 -16px;
+.back-button {
+  --padding-start: 8px;
+  --padding-end: 16px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  height: 44px; /* Apple's minimum touch target size */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 17px; /* iOS standard size */
+  --color: #2B8A8A;
+  text-transform: none;
+  letter-spacing: -0.4px;
 }
 
-ion-tab-button {
-  --color: #666;
-  --color-selected: #007AFF;
+.back-button ion-icon {
+  font-size: 24px;
+  margin-right: 4px;
 }
 </style>
