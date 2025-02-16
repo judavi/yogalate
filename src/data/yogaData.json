@@ -1,0 +1,434 @@
+[
+    {
+        "sanskrit_name": "Dandayamna Bharmanasana",
+        "english_name": "Balancing Table",
+        "image_name": "balancing_table.jpg",
+        "cues": [
+            "Keep your chest broad and open",
+            "Allow your shoulder blades to stay broad and open across the top of your back"
+        ]
+    },
+    {
+        "sanskrit_name": "Setu Bandha Sarvangasana",
+        "english_name": "Bridge",
+        "image_name": "bridge.jpg",
+        "cues": [
+            "Press your feet into your mat",
+            "Draw your knees in the same direction as your toes"
+        ]
+    },
+    {
+        "sanskrit_name": "Navasana",
+        "english_name": "Boat",
+        "image_name": "boat.jpg",
+        "cues": [
+            "Keep the chest lifted and open",
+            "Back is straight",
+            "Engage the quad muscles"
+        ]
+    },
+    {
+        "sanskrit_name": "Baddha Konasana",
+        "english_name": "Bound Angle",
+        "image_name": "bound_angle.jpg",
+        "cues": [
+            "Pull your heels in towards your pelvis",
+            "Draw your chest closer towards your feet"
+        ]
+    },
+    {
+        "sanskrit_name": "Dhanurasana",
+        "english_name": "Bow",
+        "image_name": "bow.jpg",
+        "cues": [
+            "Keep your chest reaching up and forwards",
+            "Lengthen your spine to avoid compression in the lower back"
+        ]
+    },
+    {
+        "sanskrit_name": "Ustrasana",
+        "english_name": "Camel",
+        "image_name": "camel.jpg",
+        "cues": [
+            "Lift your chest and upper torso upwards",
+            "Reach back for your ankles or feet"
+        ]
+    },
+    {
+        "sanskrit_name": "Marjaryasana",
+        "english_name": "Cat",
+        "image_name": "cat.jpg",
+        "cues": [
+            "Draw the belly into the spine",
+            "Push down through the fingers and palms as you pull the spine toward the sky"
+        ]
+    },
+    {
+        "sanskrit_name": "Utkatasana",
+        "english_name": "Chair",
+        "image_name": "chair.jpg",
+        "cues": [
+            "Squeeze the thighs together",
+            "Keep most of your weight in your heels"
+        ]
+    },
+    {
+        "sanskrit_name": "Chaturanga Dandasana",
+        "english_name": "Low Push-up",
+        "image_name": "chaturanga.jpg",
+        "cues": [
+            "Keep the shoulders above the elbows",
+            "Fully engage your leg muscles"
+        ]
+    },
+    {
+        "sanskrit_name": "Balasana",
+        "english_name": "Child",
+        "image_name": "child.jpg",
+        "cues": [
+            "Sink down into the hips",
+            "Extend out through the fingers"
+        ]
+    },
+    {
+        "sanskrit_name": "Bhujangasana",
+        "english_name": "Cobra",
+        "image_name": "cobra.jpg",
+        "cues": [
+            "Press down into the palms of the hands and work to straighten the arms"
+        ]
+    },
+    {
+        "sanskrit_name": "Bitilasana",
+        "english_name": "Cow",
+        "image_name": "cow.jpg",
+        "cues": [
+            "Pull the belly down towards the mat",
+            "Keep the chest open"
+        ]
+    },
+    {
+        "sanskrit_name": "Gomukhasana",
+        "english_name": "Cow Face",
+        "image_name": "cow_face.jpg",
+        "cues": [
+            "Stack the knees directly over each other",
+            "Draw the knees down towards the mat"
+        ]
+    },
+    {
+        "sanskrit_name": "Anjaneyasana",
+        "english_name": "Crescent Lunge",
+        "image_name": "crescent_lunge.jpg",
+        "cues": [
+            "Align your knee with your ankle",
+            "Lift the torso and pull the belly button in the spine"
+        ]
+    },
+    {
+        "sanskrit_name": "Natarajasana",
+        "english_name": "Dancer",
+        "image_name": "dancer.jpg",
+        "cues": [
+            "Keep your gaze fixed in front of you",
+            "Ground down through all corners of your standing foot"
+        ]
+    },
+    {
+        "sanskrit_name": "Ardha Pincha Mayurasana",
+        "english_name": "Dolphin",
+        "image_name": "dolphin.jpg",
+        "cues": [
+            "Lift up through your tailbone",
+            "Lengthen through your torso"
+        ]
+    },
+    {
+        "sanskrit_name": "Garudasana",
+        "english_name": "Eagle",
+        "image_name": "eagle.jpg",
+        "cues": [
+            "Sit back on your hips",
+            "Engage the core",
+            "Sink deeper into the hips to deepen the pose"
+        ]
+    },
+    {
+        "sanskrit_name": "Adho Mukha Svanasana",
+        "english_name": "Downward Facing Dog",
+        "image_name": "downward_facing_dog.jpg",
+        "cues": [
+            "Ground down through the hands and reach your heels towards the ground"
+        ]
+    },
+    {
+        "sanskrit_name": "Sukhasana",
+        "english_name": "Easy",
+        "image_name": "easy.jpg",
+        "cues": [
+            "Press evenly down into the earth",
+            "Relax your shoulders",
+            "Lengthen up through your spine"
+        ]
+    },
+    {
+        "sanskrit_name": "Utthita Parsvakonasana",
+        "english_name": "Extended Side Angle",
+        "image_name": "extended_side_angle.jpg",
+        "cues": [
+            "Root down into the outer edge of your back foot",
+            "Rotate your chest upward"
+        ]
+    },
+    {
+        "sanskrit_name": "Utkata Konasana",
+        "english_name": "Goddess",
+        "image_name": "goddess.jpg",
+        "cues": [
+            "Engage your core",
+            "Work to bring your thighs parallel to the mat",
+            "Sink deeper into your hips"
+        ]
+    },
+    {
+        "sanskrit_name": "Ardha Chandrasana",
+        "english_name": "Half Moon",
+        "image_name": "half_moon.jpg",
+        "cues": [
+            "Press down through your standing foot",
+            "Keep your shoulders stacked",
+            "Keep your hips stacked over each other"
+        ]
+    },
+    {
+        "sanskrit_name": "Ardha Uttanasana",
+        "english_name": "Halfway Lift",
+        "image_name": "halfway_lift.jpg",
+        "cues": [
+            "Keep your back flat as you lengthen forward",
+            "Draw your shoulders down away from your ears"
+        ]
+    },
+    {
+        "sanskrit_name": "Ashta Chandrasana",
+        "english_name": "High Lunge",
+        "image_name": "high_lunge.jpg",
+        "cues": [
+            "Align your front knee with your front ankle",
+            "Engage your glutes and quadriceps to keep your legs strong"
+        ]
+    },
+    {
+        "sanskrit_name": "Ananda Balasana",
+        "english_name": "Happy Baby",
+        "image_name": "happy_baby.jpg",
+        "cues": [
+            "Grab for your feet or ankles",
+            "Tuck your tailbone down towards the mat"
+        ]
+    },
+    {
+        "sanskrit_name": "Utthan Pristhasana",
+        "english_name": "Lizard",
+        "image_name": "lizard.jpg",
+        "cues": [
+            "Keep your shoulders broad",
+            "Allow your spine to remain lengthened"
+        ]
+    },
+    {
+        "sanskrit_name": "Salabhasana",
+        "english_name": "Locust",
+        "image_name": "locust.jpg",
+        "cues": [
+            "Broaden across your collar bones and chest",
+            "Lift your chest upwards"
+        ]
+    },
+    {
+        "sanskrit_name": "Tadasana",
+        "english_name": "Mountain",
+        "image_name": "mountain.jpg",
+        "cues": [
+            "Engage your core",
+            "Allow your chest to be open",
+            "Lift slightly up through your kneecaps"
+        ]
+    },
+    {
+        "sanskrit_name": "Savasana",
+        "english_name": "Corpse",
+        "image_name": "savasana.jpg",
+        "cues": [
+            "Close your eyes",
+            "Unclench your jaw",
+            "Allow your arms to rest comfortably away from your body"
+        ]
+    },
+    {
+        "sanskrit_name": "Paschimottanasana",
+        "english_name": "Seated Forward Fold",
+        "image_name": "seated_forward_fold.jpg",
+        "cues": [
+            "Engage your core muscles",
+            "Draw your shoulders away from your ears"
+        ]
+    },
+    {
+        "sanskrit_name": "Ardha Matsyendrasana",
+        "english_name": "Seated Spinal Twist",
+        "image_name": "seated_spinal_twist.jpg",
+        "cues": [
+            "Lengthen up through your spine",
+            "Engage your core muscles"
+        ]
+    },
+    {
+        "sanskrit_name": "Vasisthasana",
+        "english_name": "Side Plank",
+        "image_name": "side_plank.jpg",
+        "cues": [
+            "Stack your feet",
+            "Engage your quad muscles",
+            "Stack your shoulders"
+        ]
+    },
+    {
+        "sanskrit_name": "Uttanasana",
+        "english_name": "Standing Forward Fold",
+        "image_name": "standing_forward_fold.jpg",
+        "cues": [
+            "Allow your fold to come from your hips, not the waist",
+            "Keep your torso and spine long as you fold down"
+        ]
+    },
+    {
+        "sanskrit_name": "Upavistha Konasana",
+        "english_name": "Seated Straddle",
+        "image_name": "seated_straddle.jpg",
+        "cues": [
+            "Keep your spine long to avoid hunching over",
+            "Draw your shoulders down away from your ears"
+        ]
+    },
+    {
+        "sanskrit_name": "Jathara Parivartanasana",
+        "english_name": "Supine Twist",
+        "image_name": "supine_twist.jpg",
+        "cues": [
+            "Keep your spine long",
+            "Allow your shoulders to stay pressed to the ground"
+        ]
+    },
+    {
+        "sanskrit_name": "Eka Pada Adho Mukha Svanasana",
+        "english_name": "Three-Legged Dog",
+        "image_name": "three_legged_dog.jpg",
+        "cues": [
+            "Lengthen up through your back leg",
+            "Engage your core"
+        ]
+    },
+    {
+        "sanskrit_name": "Vrksasana",
+        "english_name": "Tree",
+        "image_name": "tree.jpg",
+        "cues": [
+            "Draw your shoulders down your back",
+            "Ground down in your standing leg",
+            "Keep your gaze on a focus point"
+        ]
+    },
+    {
+        "sanskrit_name": "Trikonasana",
+        "english_name": "Triangle",
+        "image_name": "triangle.jpg",
+        "cues": [
+            "Lift up through the arches of the feet",
+            "Keep the arms in line with the shoulders"
+        ]
+    },
+    {
+        "sanskrit_name": "Halasana",
+        "english_name": "Plow",
+        "image_name": "plow.jpg",
+        "cues": [
+            "Press your toes into the mat",
+            "Engage your core muscles"
+        ]
+    },
+    {
+        "sanskrit_name": "Rajakapotasana",
+        "english_name": "Pigeon",
+        "image_name": "pigeon.jpg",
+        "cues": [
+            "Square hips to the front of the mat",
+            "Press gently into the top of the back foot"
+        ]
+    },
+    {
+        "sanskrit_name": "Parsvottanasana",
+        "english_name": "Pyramid",
+        "image_name": "pyramid.jpg",
+        "cues": [
+            "Keep your torso elongated",
+            "Press firmly into the outer edges of both feet"
+        ]
+    },
+    {
+        "sanskrit_name": "Urdhva Mukha Svanasana",
+        "english_name": "Upward Facing Dog",
+        "image_name": "upward_facing_dog.jpg",
+        "cues": [
+            "Keep your shoulders down your back",
+            "Engage your abs",
+            "Keep your chest lifted and open"
+        ]
+    },
+    {
+        "sanskrit_name": "Virabhadrasana I",
+        "english_name": "Warrior I",
+        "image_name": "warrior_1.jpg",
+        "cues": [
+            "Keep your hips squared to the front of the mat",
+            "Point your tailbone down towards the mat"
+        ]
+    },
+    {
+        "sanskrit_name": "Virabhadrasana II",
+        "english_name": "Warrior II",
+        "image_name": "warrior_2.jpg",
+        "cues": [
+            "Align your front knee over your front ankle",
+            "Work to get your front thigh parallel to the mat"
+        ]
+    },
+    {
+        "sanskrit_name": "Virabhadrasana III",
+        "english_name": "Warrior III",
+        "image_name": "warrior_3.jpg",
+        "cues": [
+            "Press firmly into your standing foot",
+            "Engage your core muscles",
+            "Frame your arms by your ears"
+        ]
+    },
+    {
+        "sanskrit_name": "Urdhva Dhanurasana",
+        "english_name": "Wheel",
+        "image_name": "wheel.jpg",
+        "cues": [
+            "Press down evenly through your arms and legs",
+            "Lift your hips up towards the sky"
+        ]
+    },
+    {
+        "sanskrit_name": "Prasarita Padottanasana",
+        "english_name": "Wide-Legged Forward Fold",
+        "image_name": "wide_legged_forward_fold.jpg",
+        "cues": [
+            "Fold from your hips",
+            "Engage your core muscles to keep you balanced"
+        ]
+    }
+]
