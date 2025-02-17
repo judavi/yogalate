@@ -40,6 +40,7 @@
             tabindex="0"
           >
             <pose-card
+              :pose-id="pose.id"
               :pose-name="pose.name"
               :image-path="pose.image"
               role="article"

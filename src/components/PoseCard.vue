@@ -1,5 +1,5 @@
 <template>
-  <div class="pose-card">
+  <div class="pose-card" @click="goToDetail">
     <div class="image-container">
       <div class="image-wrapper">
         <img :src="imagePath" :alt="poseName" class="pose-image"/>
@@ -10,10 +10,19 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+import { useRouter } from 'vue-router';
+
+const props = defineProps<{
+  poseId: number;
   poseName: string;
   imagePath: string;
 }>();
+
+const router = useRouter();
+
+const goToDetail = async () => {
+  await router.replace(`/poses/${props.poseId}`);
+};
 </script>
 
 <style scoped>
@@ -22,6 +31,13 @@ defineProps<{
   flex-direction: column;
   align-items: center;
   margin: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pose-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .image-container {

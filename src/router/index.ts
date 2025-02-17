@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import WelcomePage from '../views/WelcomePage.vue'
+import WelcomeScreen from '../views/WelcomeScreen.vue'
 import StudyScreen from '../views/StudyScreen.vue'
-import PosesPage from '../views/PosesPage.vue'
+import PosesScreen from '../views/PosesScreen.vue'
 import ScoreScreen from '../views/ScoreScreen.vue'
+import PoseDetailScreen from '../views/PoseDetailScreen.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -13,7 +14,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/welcome',
     name: 'Welcome',
-    component: WelcomePage
+    component: WelcomeScreen
   },
   {
     path: '/study',
@@ -23,12 +24,17 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/poses',
     name: 'Poses',
-    component: PosesPage
+    component: PosesScreen
   },
   {
     path: '/score',
     name: 'Score',
     component: ScoreScreen
+  },
+  {
+    path: '/poses/:id',
+    name: 'PoseDetail',
+    component: PoseDetailScreen
   }
 ]
 
