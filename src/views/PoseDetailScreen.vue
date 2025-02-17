@@ -44,10 +44,10 @@
           <ion-button 
             expand="block" 
             class="practice-button"
-            @click="goToStudy"
+            disabled
           >
             <ion-icon :icon="playOutline" slot="start"></ion-icon>
-            Practice Now
+            Practice Now - 🕒 Coming Soon
           </ion-button>
         </div>
       </div>
