@@ -69,9 +69,13 @@ const shuffleArray = (array: any[]) => {
   return newArray;
 };
 
+// Define a variable for the number of poses to study
+const numberOfPosesToStudy = ref(2);
+
+
 // State with initial values
 const currentIndex = ref(0);
-const totalPoses = yogaData.length;
+const totalPoses = numberOfPosesToStudy.value; // Use the new variable here
 const shuffledPoses = ref<typeof yogaData>([]);
 const wrongAnswer = ref('');
 const answered = ref(false);
@@ -80,7 +84,7 @@ const answered = ref(false);
 const resetStudy = () => {
   console.log('Resetting study...');
   currentIndex.value = 0;
-  shuffledPoses.value = shuffleArray([...yogaData]);
+  shuffledPoses.value = shuffleArray([...yogaData]).slice(0, numberOfPosesToStudy.value); // Limit the poses
   wrongAnswer.value = '';
   answered.value = false;
   console.log('New shuffled poses:', shuffledPoses.value);
