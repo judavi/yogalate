@@ -263,4 +263,9 @@ ion-content {
   font-size: 24px;
   margin-right: 4px;
 }
+
+ion-toolbar {
+  --background: #FFFFFF;
+  --border-style: none;
+}
 </style> 

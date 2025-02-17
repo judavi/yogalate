@@ -5,7 +5,7 @@
         <ion-buttons slot="start">
           <ion-button class="back-button" @click="goBack">
             <ion-icon :icon="chevronBack" />
-            <span>Home</span>
+            <span>Back</span>
           </ion-button>
         </ion-buttons>
       </ion-toolbar>
@@ -165,5 +165,10 @@ ion-col:focus {
 ion-col:focus-visible {
   outline: 2px solid #2B8A8A;
   border-radius: 8px;
+}
+
+ion-toolbar {
+  --background: #FFFFFF;
+  --border-style: none;
 }
 </style>

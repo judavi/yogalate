@@ -66,12 +66,12 @@ import {
   IonPage, 
   IonContent, 
   IonButton,
-  IonIcon 
+  IonIcon
 } from '@ionic/vue';
 import { 
   trophyOutline, 
   homeOutline, 
-  refreshOutline 
+  refreshOutline
 } from 'ionicons/icons';
 import { computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';

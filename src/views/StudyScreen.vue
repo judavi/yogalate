@@ -12,7 +12,7 @@
         <ion-buttons slot="start">
           <ion-button class="back-button" @click="goBack">
             <ion-icon :icon="chevronBack" />
-            <span>Home</span>
+            <span>Back</span>
           </ion-button>
         </ion-buttons>
         <div class="progress-counter" slot="end">
@@ -328,5 +328,10 @@ ion-button.wrong-answer:active {
 
 ion-button::part(native) {
   padding: 0 24px;
+}
+
+ion-toolbar {
+  --background: #FFFFFF;
+  --border-style: none;
 }
 </style> 
