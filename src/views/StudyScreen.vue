@@ -1,5 +1,12 @@
 <template>
-  <ion-page>
+  <score-screen 
+    v-if="showScore"
+    :total-poses="totalPoses"
+    :correct-answers="correctAnswers"
+    :wrong-answers="wrongAnswers"
+    @hide-score="showScore = false"
+  />
+  <ion-page v-else>
     <ion-header class="ion-no-border">
       <ion-toolbar>
         <ion-buttons slot="start">
@@ -52,12 +59,14 @@ import {
   IonIcon
 } from '@ionic/vue';
 import { chevronBack } from 'ionicons/icons';
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
 import confetti from 'canvas-confetti';
 import yogaData from '../data/yogaData.json';
+import ScoreScreen from './ScoreScreen.vue';
 
 const router = useRouter();
+const route = useRoute();
 
 // Shuffle array function needs to be defined before we use it
 const shuffleArray = (array: any[]) => {
@@ -69,31 +78,42 @@ const shuffleArray = (array: any[]) => {
   return newArray;
 };
 
-// Define a variable for the number of poses to study
-const numberOfPosesToStudy = ref(2);
-
-
 // State with initial values
 const currentIndex = ref(0);
-const totalPoses = numberOfPosesToStudy.value; // Use the new variable here
+const numberOfPosesToStudy = ref(2); // This defines how many poses to study
+const totalPoses = numberOfPosesToStudy.value;
 const shuffledPoses = ref<typeof yogaData>([]);
 const wrongAnswer = ref('');
 const answered = ref(false);
+const correctAnswers = ref(0);
+const wrongAnswers = ref(0);
+const showScore = ref(false);
 
 // Reset function
 const resetStudy = () => {
   console.log('Resetting study...');
   currentIndex.value = 0;
-  shuffledPoses.value = shuffleArray([...yogaData]).slice(0, numberOfPosesToStudy.value); // Limit the poses
+  shuffledPoses.value = shuffleArray([...yogaData]).slice(0, numberOfPosesToStudy.value);
   wrongAnswer.value = '';
   answered.value = false;
-  console.log('New shuffled poses:', shuffledPoses.value);
+  correctAnswers.value = 0;
+  wrongAnswers.value = 0;
+  showScore.value = false;
 };
 
-const goBack = () => {
+const goBack = async () => {
+  showScore.value = false;
   resetStudy();
-  router.push('/welcome');
+  await router.replace('/welcome');
 };
+
+// Watch for route changes to reset study
+watch(
+  () => route.query,
+  () => {
+    resetStudy();
+  }
+);
 
 // Confetti effect
 const triggerConfetti = () => {
@@ -138,24 +158,34 @@ const options = computed(() => {
 });
 
 // Handle answer
-const checkAnswer = (answer: string) => {
+const checkAnswer = async (answer: string) => {
   if (!currentPose.value) return;
   answered.value = true;
 
   if (answer === currentPose.value.english_name) {
+    correctAnswers.value++;
     triggerConfetti();
-    setTimeout(() => {
-      if (currentIndex.value < totalPoses - 1) {
-        currentIndex.value++;
-        answered.value = false;
-      }
-    }, 1000);
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    if (currentIndex.value < totalPoses - 1) {
+      currentIndex.value++;
+      answered.value = false;
+    } else {
+      await router.replace({
+        path: '/score',
+        query: {
+          totalPoses: totalPoses.toString(),
+          correctAnswers: correctAnswers.value.toString(),
+          wrongAnswers: wrongAnswers.value.toString()
+        }
+      });
+    }
   } else {
     wrongAnswer.value = answer;
-    setTimeout(() => {
-      wrongAnswer.value = '';
-      answered.value = false;
-    }, 1000);
+    wrongAnswers.value++;
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    wrongAnswer.value = '';
+    answered.value = false;
   }
 };
 
@@ -165,9 +195,9 @@ onMounted(() => {
   resetStudy();
 });
 
-// Clean up on unmount
+// Clean up better on unmount
 onBeforeUnmount(() => {
-  console.log('Component unmounting');
+  showScore.value = false;
   resetStudy();
 });
 </script>
@@ -243,9 +273,11 @@ ion-content {
 .pose-illustration {
   width: 100%;
   max-width: 240px;
-  height: auto;
+  aspect-ratio: 1; /* Makes it square */
   margin: 0 auto;
   display: block;
+  object-fit: contain; /* Ensures image maintains proportions */
+  padding: 20px; /* Add some padding around the image */
 }
 
 .sanskrit-name {

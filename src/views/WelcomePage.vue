@@ -60,7 +60,7 @@ const router = useRouter();
 // Add async/await to ensure navigation completes
 const goToStudy = async () => {
   try {
-    await router.push('/study');
+    await router.replace('/study');
   } catch (error) {
     console.error('Navigation error:', error);
   }
@@ -68,7 +68,7 @@ const goToStudy = async () => {
 
 const goToPoses = async () => {
   try {
-    await router.push('/poses');
+    await router.replace('/poses');
   } catch (error) {
     console.error('Navigation error:', error);
   }
