@@ -29,6 +29,8 @@
               @click="checkAnswer(option)"
               expand="block"
               fill="outline"
+              :class="{ 'wrong-answer': wrongAnswer === option }"
+              :disabled="answered"
             >
               {{ option }}
             </ion-button>
@@ -52,6 +54,7 @@ import {
 import { chevronBack } from 'ionicons/icons';
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 import { useRouter } from 'vue-router';
+import confetti from 'canvas-confetti';
 import yogaData from '../data/yogaData.json';
 
 const router = useRouter();
@@ -70,18 +73,32 @@ const shuffleArray = (array: any[]) => {
 const currentIndex = ref(0);
 const totalPoses = yogaData.length;
 const shuffledPoses = ref<typeof yogaData>([]);
+const wrongAnswer = ref('');
+const answered = ref(false);
 
 // Reset function
 const resetStudy = () => {
   console.log('Resetting study...');
   currentIndex.value = 0;
   shuffledPoses.value = shuffleArray([...yogaData]);
+  wrongAnswer.value = '';
+  answered.value = false;
   console.log('New shuffled poses:', shuffledPoses.value);
 };
 
 const goBack = () => {
   resetStudy();
   router.push('/welcome');
+};
+
+// Confetti effect
+const triggerConfetti = () => {
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 },
+    colors: ['#2B8A8A', '#247777', '#1B5555']
+  });
 };
 
 // Get current pose with null check
@@ -119,10 +136,22 @@ const options = computed(() => {
 // Handle answer
 const checkAnswer = (answer: string) => {
   if (!currentPose.value) return;
+  answered.value = true;
+
   if (answer === currentPose.value.english_name) {
-    if (currentIndex.value < totalPoses - 1) {
-      currentIndex.value++;
-    }
+    triggerConfetti();
+    setTimeout(() => {
+      if (currentIndex.value < totalPoses - 1) {
+        currentIndex.value++;
+        answered.value = false;
+      }
+    }, 1000);
+  } else {
+    wrongAnswer.value = answer;
+    setTimeout(() => {
+      wrongAnswer.value = '';
+      answered.value = false;
+    }, 1000);
   }
 };
 
@@ -232,6 +261,19 @@ ion-content {
   width: 100%;
 }
 
+.wrong-answer {
+  --background: #FEE2E2 !important;
+  --border-color: #EF4444 !important;
+  --color: #EF4444 !important;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
 ion-button {
   --border-color: #2B8A8A;
   --color: #2B8A8A;
@@ -239,6 +281,13 @@ ion-button {
   height: 48px;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+ion-button.wrong-answer:active {
+  --background: #FEE2E2;
+  --border-color: #EF4444;
+  --color: #EF4444;
 }
 
 ion-button::part(native) {
