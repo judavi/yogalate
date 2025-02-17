@@ -7,16 +7,12 @@
         <div class="hero-overlay"></div>
       </div>
 
-      <!-- Statistics Section -->
-      <div class="stats-section">
-        <div class="stat-circle">
-          <h2>2</h2>
-          <p>Hours</p>
-        </div>
-        <div class="stat-circle">
-          <h2>8</h2>
-          <p>Sessions</p>
-        </div>
+      <!-- Welcome Content -->
+      <div class="welcome-content">
+        <h1 class="welcome-title">Yoga Flow</h1>
+        <p class="welcome-description">
+          Learn yoga poses the fun way! Flip through pose cards, guess the correct name, and improve your practice!
+        </p>
       </div>
 
       <!-- Action Buttons -->
@@ -27,6 +23,7 @@
           @click="goToStudy"
           :router-link="false"
         >
+          <ion-icon :icon="playOutline" slot="start"></ion-icon>
           Start Practice
         </ion-button>
         <ion-button 
@@ -35,6 +32,7 @@
           class="library-button" 
           @click="goToPoses"
         >
+          <ion-icon :icon="libraryOutline" slot="start"></ion-icon>
           Poses Library
         </ion-button>
         <ion-button 
@@ -43,6 +41,7 @@
           class="support-button"
           @click="openSupportLink"
         >
+          <ion-icon :icon="heartOutline" slot="start"></ion-icon>
           Support Creator
         </ion-button>
       </div>
@@ -51,7 +50,8 @@
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonContent, IonButton } from '@ionic/vue';
+import { IonPage, IonContent, IonButton, IonIcon } from '@ionic/vue';
+import { playOutline, libraryOutline, heartOutline } from 'ionicons/icons';
 import { useRouter } from 'vue-router';
 import { Browser } from '@capacitor/browser';
 
@@ -85,7 +85,7 @@ const openSupportLink = async () => {
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 45vh;
   overflow: hidden;
 }
 
@@ -101,50 +101,42 @@ const openSupportLink = async () => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
 }
 
-.stats-section {
-  display: flex;
-  justify-content: space-around;
-  padding: 32px 16px;
-  margin-top: -60px;
-  position: relative;
-  z-index: 1;
-}
-
-.stat-circle {
-  width: 160px;
-  height: 160px;
+.welcome-content {
+  padding: 32px 24px;
+  text-align: center;
   background: white;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: -40px;
+  position: relative;
+  border-radius: 32px 32px 0 0;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
 }
 
-.stat-circle h2 {
+.welcome-title {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 32px;
   color: #2B8A8A;
-  margin: 0;
+  margin: 0 0 16px 0;
 }
 
-.stat-circle p {
+.welcome-description {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  color: #2B8A8A;
-  margin: 4px 0 0 0;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+  padding: 0 16px;
 }
 
 .action-buttons {
-  padding: 32px 24px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  background: white;
 }
 
 ion-button {
@@ -154,6 +146,11 @@ ion-button {
   font-size: 16px;
   --border-radius: 12px;
   transition: all 0.2s ease;
+}
+
+ion-button ion-icon {
+  font-size: 20px;
+  margin-right: 8px;
 }
 
 .start-button {

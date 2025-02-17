@@ -19,16 +19,7 @@
       </div>
 
       <!-- Stats Section -->
-      <div class="stats-container" role="complementary">
-        <div class="stat-item">
-          <h2>2</h2>
-          <p>Hours</p>
-        </div>
-        <div class="stat-item">
-          <h2>8</h2>
-          <p>Sessions</p>
-        </div>
-      </div>
+
 
       <!-- Grid of Poses -->
       <ion-grid>
